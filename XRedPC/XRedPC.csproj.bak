@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,16 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -57,7 +73,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassUnit\DataAdapter.cs" />
     <Compile Include="ClassUnit\GetInfoHardware.cs" />
+    <Compile Include="MenuForm\ucGraphics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuForm\ucGraphics.Designer.cs">
+      <DependentUpon>ucGraphics.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm\ucMotherboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +105,18 @@
     <Compile Include="MenuForm\ucProcessor.Designer.cs">
       <DependentUpon>ucProcessor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuForm\ucRAM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuForm\ucRAM.Designer.cs">
+      <DependentUpon>ucRAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm\ucStorage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuForm\ucStorage.Designer.cs">
+      <DependentUpon>ucStorage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +125,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemForm\SplashLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm\SplashLoad.Designer.cs">
+      <DependentUpon>SplashLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemForm\ucWelcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SystemForm\ucWelcome.Designer.cs">
       <DependentUpon>ucWelcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MenuForm\ucGraphics.resx">
+      <DependentUpon>ucGraphics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm\ucMotherboard.resx">
       <DependentUpon>ucMotherboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm\ucProcessor.resx">
       <DependentUpon>ucProcessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm\ucRAM.resx">
+      <DependentUpon>ucRAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm\ucStorage.resx">
+      <DependentUpon>ucStorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
@@ -120,7 +170,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SystemForm\SplashLoad.resx">
+      <DependentUpon>SplashLoad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SystemForm\ucWelcome.resx">
       <DependentUpon>ucWelcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,9 +191,71 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\core_i7_logo_%282015%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\core_i3_logo_%282015%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\core_i5_logo_%282015%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\core_i9x_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intel inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_bronze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_platinum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_universal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intel_pentium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intel_celeron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Badge-atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xeon_phi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMRA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nVidia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

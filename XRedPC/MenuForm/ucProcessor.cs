@@ -238,7 +238,7 @@ namespace XRedPC.MenuForm
                 {
                     CB_PIndex.Properties.Items.Add(DataAdapter.DtProcessor.Rows[x][0].ToString());
                 }
-            } 
+            }
         }
 
         private void ucProcessor_Load(object sender, EventArgs e)
